@@ -33,10 +33,6 @@ include_once('header.php');
 					<td><?php echo $dapat->nama; ?></td>
 					<td>
 						<a href="jenis_edit.php?id=<?php echo $dapat->id; ?>">Edit</a>
-						<!--a onclick="return confirm('Anda yakin ingin menghapus data ini?')" href="jenis_hapus.php?id=<?php //echo $dapat->id; 
-																														?>">Hapus</a-->
-						<!-- <label for="modal-<?php echo $dapat->id; ?>">Hapus</label> -->
-						<!-- <label class="hapus paper-btn btn-small btn-danger" for="modal-1" data-id="<?= $dapat->id; ?>">Hapus</label> -->
 						<label for="modal-<?php echo $dapat->id; ?>">Hapus</label>
 
 						<input class="modal-state" id="modal-<?php echo $dapat->id; ?>" type="checkbox">
