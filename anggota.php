@@ -35,7 +35,7 @@ while($dapat = $data->fetch(PDO::FETCH_OBJ)) {
 					<td>
 						<a href="anggota_edit.php?kunci=<?php echo $dapat->nia; ?>">Edit</a>
 						<!--a onclick="return confirm('Anda yakin ingin menghapus data ini?')" href="anggota_hapus.php?kunci=<?php //echo $dapat->nia; ?>">Hapus</a-->
-						<label for="modal-<?php echo $dapat->nia; ?>">Hapus</label>
+						<label for="modal-<?php echo $dapat->nia; ?>" class="paper-btn btn-danger btn-small">Hapus</label>
 						<input class="modal-state" id="modal-<?php echo $dapat->nia; ?>" type="checkbox">
 						<div class="modal">
 							<label class="modal-bg" for="modal-<?php echo $dapat->nia; ?>"></label>

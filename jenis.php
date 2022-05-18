@@ -32,7 +32,7 @@ include_once('header.php');
 					<td><?php echo $dapat->nama; ?></td>
 					<td>
 						<a href="jenis_edit.php?id=<?php echo $dapat->id; ?>">Edit</a>
-						<label for="modal-<?php echo $dapat->id; ?>">Hapus</label>
+						<label for="modal-<?php echo $dapat->id; ?>" class="paper-btn btn-danger btn-small">Hapus</label>
 
 						<input class="modal-state" id="modal-<?php echo $dapat->id; ?>" type="checkbox">
 						<div class="modal">
