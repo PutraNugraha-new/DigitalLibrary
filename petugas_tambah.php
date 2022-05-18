@@ -10,7 +10,7 @@ include_once('header.php');
 						<label>NIP</label>
 					</div>
 					<div class="col-2">
-						<input type="text" name="nip" placeholder="NIP petugas" class="input-block" required>
+						<input type="text" maxlength="5" name="nip" placeholder="NIP petugas" class="input-block" required>
 					</div>
 				</div>
 				<div class="row form-group flex-middle">
@@ -26,7 +26,7 @@ include_once('header.php');
 						<label>Ponsel</label>
 					</div>
 					<div class="col-4">
-						<input type="text" name="ponsel" placeholder="Nomor ponsel" class="input-block" required>
+						<input type="text" name="ponsel" maxlength="13" placeholder="Nomor ponsel" class="input-block" required>
 					</div>
 				</div>
 				<div class="row form-group flex-middle">

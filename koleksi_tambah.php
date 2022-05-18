@@ -54,7 +54,7 @@ while($dapat=$data->fetch(PDO::FETCH_OBJ)) {
 						<label>Tahun</label>
 					</div>
 					<div class="col-9">
-						<input type="text" name="tahun" placeholder="Tahun" required>
+						<input type="text" name="tahun" maxlength="4" placeholder="Tahun" required>
 					</div>
 				</div>
 				<div class="row form-group flex-middle">
