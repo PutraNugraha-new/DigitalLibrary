@@ -23,7 +23,6 @@ include_once('header.php');
 			<?php
 			$nomor = 1;
 			$jenis = new DB();
-			// $cekk = $jenis->hapusSatuData('view_koleksi');
 			$data = $jenis->bacaSemua('jenis', 'nama', 'DESC');
 			while ($dapat = $data->fetch(PDO::FETCH_OBJ)) {
 			?>

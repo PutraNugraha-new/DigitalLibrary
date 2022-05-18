@@ -85,6 +85,7 @@ class DB
 		$q = $this->dbConn->prepare($sql);
 		$q->execute();
 	}
+	// method untuk tugas 3
 	function jenisKoleksi($tabel, $data)
 	{
 		$sql = "SELECT * FROM $tabel WHERE jenis_id=$data";
