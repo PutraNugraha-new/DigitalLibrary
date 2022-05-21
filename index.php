@@ -42,9 +42,34 @@ include_once('header.php');
 				echo "Ditemukan ". $hasil . " koleksi...";
 				echo "<br><br>";
 				$data = $cari->cariKoleksi($_POST['kolom'], $_POST['kunci']);
-				
-				// belum selesai
-				
+		?>
+				<table class="table-hover">
+			<thead>
+				<tr>
+					<th>Judul</th>
+					<th>Pengarang</th>
+					<th>Penerbit</th>
+					<th>Tahun</th>
+					<th>Jenis</th>
+				</tr>
+			</thead>
+			<tbody>
+				<?php 
+					while($dapat = $data->fetch(PDO::FETCH_OBJ)) {
+				?>
+						<tr>
+							<td><?= $dapat->judul?></td>
+							<td><?= $dapat->pengarang?></td>
+							<td><?= $dapat->penerbit?></td>
+							<td><?= $dapat->tahun?></td>
+							<td><?= $dapat->nama?></td>
+						</tr>
+				<?php	
+					}
+				?>
+			</tbody>
+			</table>
+			<?php	
 			}
 
 		}
