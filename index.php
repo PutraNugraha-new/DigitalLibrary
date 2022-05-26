@@ -2,7 +2,7 @@
 include_once('class_cari.php'); 
 include_once('header.php');
 ?>
-<div class="col-12">
+<div class="col-12" style="text-align:center;">
 	<h3 class="text-center">Cari Koleksi</h3>
 	<br>
 	<div class="row flex-center">
@@ -43,14 +43,15 @@ include_once('header.php');
 				echo "<br><br>";
 				$data = $cari->cariKoleksi($_POST['kolom'], $_POST['kunci']);
 		?>
+			<div class="alert alert-success">
 				<table class="table-hover">
 			<thead>
 				<tr>
-					<th>Judul</th>
-					<th>Pengarang</th>
-					<th>Penerbit</th>
-					<th>Tahun</th>
-					<th>Jenis</th>
+					<th class="text-secondary">Judul</th>
+					<th class="text-secondary">Pengarang</th>
+					<th class="text-secondary">Penerbit</th>
+					<th class="text-secondary">Tahun</th>
+					<th class="text-secondary">Jenis</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -58,17 +59,18 @@ include_once('header.php');
 					while($dapat = $data->fetch(PDO::FETCH_OBJ)) {
 				?>
 						<tr>
-							<td><?= $dapat->judul?></td>
-							<td><?= $dapat->pengarang?></td>
-							<td><?= $dapat->penerbit?></td>
-							<td><?= $dapat->tahun?></td>
-							<td><?= $dapat->nama?></td>
+							<td class="text-primary"><?= $dapat->judul?></td>
+							<td class="text-primary"><?= $dapat->pengarang?></td>
+							<td class="text-primary"><?= $dapat->penerbit?></td>
+							<td class="text-primary"><?= $dapat->tahun?></td>
+							<td class="text-primary"><?= $dapat->nama?></td>
 						</tr>
 				<?php	
 					}
 				?>
 			</tbody>
 			</table>
+			</div>
 			<?php	
 			}
 
@@ -76,7 +78,8 @@ include_once('header.php');
 		?>
 	
 	</div>
-	
+	<br>
+	<a href="login.php">Login Petugas</a>
 </div>
 <?php
 include_once('footer.php');

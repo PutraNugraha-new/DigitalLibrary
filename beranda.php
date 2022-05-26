@@ -2,6 +2,8 @@
 include_once('DB.php'); 
 include_once('header.php');
 $jumlah = new DB();
+include_once('class_login.php');
+(new Login())->cekSesi();
 ?>
 		<div class="md-9 sm-9 col">
 			<h3 class="text-center">Data Statistik</h3>
