@@ -1,6 +1,8 @@
 <?php
 include_once('DB.php');
 include_once('header.php');
+include_once('class_login.php');
+(new Login())->cekSesi();
 ?>
 <div class="md-9 sm-9 col">
 	<h3>Jenis

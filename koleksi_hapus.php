@@ -1,4 +1,6 @@
 <?php
+include_once('class_login.php');
+(new Login())->cekSesi();
 include_once('DB.php');
 $a=new DB();
 // tangkap kiriman data

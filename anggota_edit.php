@@ -1,6 +1,8 @@
 <?php
 include_once('DB.php'); 
 include_once('header.php'); 
+include_once('class_login.php');
+(new Login())->cekSesi();
 $a=new DB();
 $data=$_GET['kunci'];
 $hasil=$a->bacaSatuData('anggota', 'nia', $data);

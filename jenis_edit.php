@@ -1,6 +1,8 @@
 <?php
 include_once('DB.php'); 
 include_once('header.php'); 
+include_once('class_login.php');
+(new Login())->cekSesi();
 $j=new DB();
 $data=$_GET['id'];
 $hasil=$j->bacaSatuData('jenis', 'id', $data);

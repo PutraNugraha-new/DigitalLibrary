@@ -6,13 +6,25 @@ class Login extends DB
 {
 	function cekAkun($nip,$sandi)
 	{
-        echo "$nip - $sandi";
-		// $sql = "SELECT * FROM $tabel ORDER BY $kolom $order";
-		// $q = $this->dbConn->prepare($sql);
-		// $q->execute();
-		// return $q;
+        // echo "$nip - $sandi";
+		$sql = "SELECT * FROM petugas WHERE nip='$nip'";
+		$q = $this->dbConn->prepare($sql);
+		$q->execute();
+		$r=$q->fetch(PDO::FETCH_OBJ);
+		if($r->nip <> $nip) {
+			echo "User ID tidak ditemukan!";
+		}else{
+			// echo "Horeee...";
+			if($r->sandi <> md5($sandi)) {
+				echo "Sandi salah";
+			}else{
+				// echo "sandi benar";
+				$this->buatSesi($r->nip,$r->nama);
+				header('location:beranda.php');
+			}
+		}
 	}
-	function buatSesi()
+	function buatSesi($nip,$nama)
 	{
         $_SESSION['nip'] = $nip;
         $_SESSION['nama'] = $nama;
