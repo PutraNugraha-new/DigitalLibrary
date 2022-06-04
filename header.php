@@ -15,7 +15,7 @@
 	<div class="row">
 		<div class="col-12 col text-center">
 			<h1>E-مكتبة</h1>
-			<p>Aplikasi simpel untuk mengolah data perpustakaan berbasis web menggunakan PBO.</p>
+			<p>Perpustakaan adalah tempat dari segala jendela ilmu.</p>
 			<hr>
 		</div>
 	</div>
